@@ -1,0 +1,29 @@
+name: Minha Primeira Linha de Montagem
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-e-teste:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1.checkout do codigo
+        uses: actions/checkout@v4
+
+      - name: 2. executar teste e gerar identificador
+        run: echo "Construindo o projeto... Verificando se todas as peças se encaixam!"
+
+      - name: 3. Disponibilizar artefato
+        run: echo "Rodando os testes automatizados... Verificando se a porta abre e fecha!"
+        
+        - name: 3. Estação de Teste (Controle de Qualidade)     
+
+run: echo "Rodando os testes automatizados... Verificando se a porta abre e fecha!"
+
+- name: 4. Empacotar o produto final (Artefato)
+uses: actions/upload-artifact@v3
+with:
+name: pacote-do-produto
+path: produto.txt
